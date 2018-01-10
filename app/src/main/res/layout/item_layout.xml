@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/blue_cardView"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="20dp"
+    >
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraynt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/crypto_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Crypto"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="100"
+            android:textColor="#00e676"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.418"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crypto_name_tv" />
+
+        <TextView
+            android:id="@+id/usd_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="USD"
+            android:textColor="#00e676"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toEndOf="@+id/price_tv"
+            app:layout_constraintTop_toBottomOf="@+id/crypto_name_tv" />
+
+        <TextView
+            android:id="@+id/change_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="32dp"
+            android:text="Change"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+
+            android:id="@+id/htv"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="1h"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/change_tv" />
+
+        <TextView
+            android:id="@+id/_1h_change_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-5%"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/_24tv"
+            app:layout_constraintStart_toEndOf="@+id/htv" />
+
+        <TextView
+            android:id="@+id/_24tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24h"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@+id/_1h_change_tv"
+            app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/_24h_change_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%"
+            app:layout_constraintStart_toEndOf="@+id/_24tv"
+            app:layout_constraintTop_toBottomOf="@+id/price_tv" />
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/_7dtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7d"
+            android:textColor="@android:color/black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/_7d_change_view"
+            app:layout_constraintStart_toEndOf="@+id/_24h_change_tv" />
+
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/_7d_change_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            app:layout_constraintStart_toEndOf="@+id/_7dtv"
+            app:layout_constraintTop_toBottomOf="@+id/usd_tv" />
+
+        <TextView
+            android:id="@+id/last_updated_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="03:58 18.01.70"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crypto_name_tv" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

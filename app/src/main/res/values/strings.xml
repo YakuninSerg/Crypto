@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Crypto</string>
+    <string name="menu_settings">Валюта цены</string>
+    <string name="menu_usd">USD</string>
+    <string name="menu_eur">EUR</string>
+    <string name="menu_rub">RUB</string>
+</resources>
