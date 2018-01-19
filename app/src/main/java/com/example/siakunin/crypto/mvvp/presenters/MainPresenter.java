@@ -15,6 +15,7 @@ import java.util.concurrent.TimeoutException;
 
 import javax.inject.Inject;
 
+import io.reactivex.Completable;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -86,9 +87,11 @@ public class MainPresenter extends MvpPresenter<MainView> {
                 });
     }
     public void loadMoreTenCryptos(){
+
         if(noError){
             mApi.getCurrencyList(limit,start,convert)
                     .timeout(10, TimeUnit.SECONDS)
+                    .delay(1,TimeUnit.SECONDS)
                     .flatMap(cryptos -> Observable.fromIterable(cryptos))
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Observer<Crypto>() {
@@ -113,9 +116,13 @@ public class MainPresenter extends MvpPresenter<MainView> {
                         @Override
                         public void onError(Throwable e) {
                             Log.e(TAG,"Произошла ошибка!",e);
-                            if (e instanceof TimeoutException) getViewState().showMessage("Истекло время ожидания!");
-                            else getViewState().showMessage("Couldn't load data");
-                            getViewState().hideProgressBar();
+                            if (e instanceof TimeoutException) {
+                                getViewState().showMessage("Истекло время ожидания!");
+                            }
+                            else {
+                                getViewState().showMessage("Couldn't load data");
+                                getViewState().hideProgressBar();
+                            }
                             setLoading(false);
                         }
 

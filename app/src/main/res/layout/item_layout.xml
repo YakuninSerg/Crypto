@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="36dp"
             android:text="Change"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -83,11 +83,11 @@
             android:id="@+id/htv"
             android:layout_width="16dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:text="1h"
             android:textColor="@android:color/black"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/change_tv" />
+            app:layout_constraintStart_toEndOf="@+id/change_tv"
+            app:layout_constraintTop_toTopOf="@+id/_24tv" />
 
         <TextView
             android:id="@+id/_1h_change_tv"
@@ -146,5 +146,15 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/crypto_name_tv" />
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

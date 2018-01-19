@@ -92,13 +92,13 @@ public class CryptoAdapter extends RecyclerView.Adapter <RecyclerView.ViewHolder
             }
 
 
-            if (_1hChange < 0) holder._1hChangeTv.setTextColor(Color.RED);
+            if (_1hChange!=null && _1hChange < 0) holder._1hChangeTv.setTextColor(Color.RED);
             else holder._1hChangeTv.setTextColor(Color.GREEN);
 
-            if (_24hChange < 0) holder._24hChangeTv.setTextColor(Color.RED);
+            if (_24hChange!=null && _24hChange < 0) holder._24hChangeTv.setTextColor(Color.RED);
             else holder._24hChangeTv.setTextColor(Color.GREEN);
 
-            if (_7dChange < 0) holder._7dChangeTv.setTextColor(Color.RED);
+            if (_7dChange!=null &&_7dChange < 0) holder._7dChangeTv.setTextColor(Color.RED);
             else holder._7dChangeTv.setTextColor(Color.GREEN);
 
             holder._1hChangeTv.setText(String.format("%s%%", _1hChange));
